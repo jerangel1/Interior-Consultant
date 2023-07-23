@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background-color: #181719;
+}
+
+:root {
+ --black: #181719;
+ --white: #fff;
+ --gray: #828282;
+
+ --fontCrimson: 'Crimson Pro', serif;
+ --fontLora: 'Lora', serif;
+ --fontMontserrat: 'Montserrat', sans-serif;
+}
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body {
+ background: var(--black);
+ color: var(--white);
+}
+
+img {
+ display: block;
+}
+
+.wrapper {
+ padding: 0 0.75rem;
+ max-width: 1110px;
+ margin: auto;
+}
+.navbar {
+ height: 80px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: sticky;
+ top: 0;
+ z-index: 10;
+ background: var(--black);
+}
+
+.navbar__container {
+ display: flex;
+ justify-content: space-between;
+ z-index: 1;
+ width: 100%;
+ padding: 0 0.75rem;
+ max-width: 1100px;
+}
+
+.navbar__logo {
+ padding: 0.5rem;
+ display: flex;
+ align-items: center;
+ justify-self: flex-start;
+ font-family: var(--fontCrimson);
+ font-size: 0.875rem;
+ font-weight: 200;
+ color: var(--white);
+ text-decoration: none;
+ text-transform: uppercase;
+ border: 1px solid var(--white);
+ cursor: pointer;
+}
+
+.navbar__toggle {
+ display: none;
+}
+
+@media screen and (max-width: 768px) {
+ .navbar__toggle {
+     width: 38px;
+     display: block;
+     cursor: pointer;
+     z-index: 1;
+ }
+}
+
+.navbar__menu {
+ display: flex;
+ align-items: center;
+ list-style: none;
+ gap: 5.375rem;
+}
+
+@media screen and (max-width: 768px) {
+ .navbar__menu {
+     display: none;
+ }
+
+ .navbar__menu--mobile {
+     height: 100vh;
+     width: 100%;
+     top: 0;
+     left: 0;
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 1.5rem;
+     background: var(--black);
+ }
+}
+
+.navbar__links {
+ display: flex;
+ align-items: center;
+ font-family: var(--fontMontserrat);
+ font-size: 1.125rem;
+ font-weight: 500;
+ color: var(--white);
+ cursor: pointer;
+}
+
+.navbar__links:active {
+ font-weight: 700;
+ border-bottom: 2px solid var(--white);
+}
+
+.about__container {
+ margin: 0.5rem 0 2rem 0;
+ display: flex;
+ flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+ .about__container {
+     margin: 6rem 0;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ }
+}
+
+.about__title {
+ margin-bottom: 1.5625rem;
+ font-family: var(--fontLora);
+ font-size: 2rem;
+ font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+ .about__title {
+     margin-bottom: 2.5rem;
+     font-size: 3rem;
+ }
+}
+
+.about__description {
+ margin-bottom: 1.5625rem;
+ font-family: var(--fontMontserrat);
+ font-size: 0.875rem;
+ font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+ .about__description {
+     margin-bottom: 3rem;
+     font-size: 1.5rem;
+ }
+}
+
+.about__read-more {
+ width: fit-content;
+ margin-bottom: 2.3125rem;
+ display: flex;
+ align-items: center;
+ font-family: var(--fontMontserrat);
+ font-size: 0.875rem;
+ font-weight: 700;
+ color: whitesmoke;
+ text-decoration: none;
+ gap: 0.9375rem;
+ cursor: pointer;
+}
+
+.fa-arrow-right {
+ color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+ .about__read-more {
+     font-size: 1.125rem;
+ }
+}
+
+.card__wrapper {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+}
+
+.card__container {
+ height: 100%;
+ margin-bottom: 86.4px;
+}
+
+.card__example-img {
+ width: 100%;
+}
+
+.card {
+ position: absolute;
+ height: 138px;
+ width: 300px;
+ bottom: -5.4rem;
+ right: 0.7rem;
+ padding: 1.5625rem 1.1875rem;
+ background: var(--black);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card__user {
+ margin-bottom: 0.5rem;
+ display: flex;
+ align-items: center;
+}
+
+.card__avatar {
+ height: 2.286875rem;
+ width: 2.286875rem;
+ border-radius: 50%;
+ margin-right: 0.8rem;
+}
+
+.card__user-name {
+ margin-bottom: 0.365625rem;
+ font-family: var(--fontMontserrat);
+ font-size: 0.75rem;
+ font-weight: 500;
+}
+
+.card__user-job {
+ font-family: var(--fontMontserrat);
+ font-size: 0.625rem;
+ font-weight: 500;
+ color: var(--gray);
+}
+
+.card__comment {
+ max-width: 13.125rem;
+ font-family: var(--fontLora);
+ font-size: 1.125rem;
+ font-weight: 700;
+}
+
+.footer {
+ padding: 2.75rem 0.75rem;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 14px;
+ text-align: center;
+}
+
+.footer p {
+ color: gray;
+}
+
+.footer a {
+ font-weight: 700;
+ color: gray;
+}
